@@ -117,8 +117,8 @@ BUNDLE_WITHOUT: development:test
 BUNDLE_DISABLE_SHARED_GEMS: '1'
 " > $BUILD_DIR/.bundle/config
 
-set-default-env LIBRARY_PATH "$APP_GEOS/lib:$APP_GDAL/lib:$APP_PROJ/lib"
-set-default-env LD_LIBRARY_PATH "$APP_GEOS/lib:$APP_GDAL/lib:$APP_PROJ/lib"
-set-default-env CPATH "$APP_GEOS/include:$APP_GDAL/include:$APP_PROJ/include"
+set-env LIBRARY_PATH "\$LIBRARY_PATH:$APP_GEOS/lib:$APP_GDAL/lib:$APP_PROJ/lib"
+set-env LD_LIBRARY_PATH "\$LD_LIBRARY_PATH:$APP_GEOS/lib:$APP_GDAL/lib:$APP_PROJ/lib"
+set-env CPATH "\$CPATH:$APP_GEOS/include:$APP_GDAL/include:$APP_PROJ/include"
 
 echo "-----> Vendoring geo libraries done"
